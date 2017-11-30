@@ -33,5 +33,14 @@
 .tartalom {
     background-color: lightgrey;
     height: 1000px; /*ez csak azért kell hogy a scrollbar megjelenjen*/
+/*    bizonyos css property-ket nem ajánlott használni, mert nem mindig böngésző ismeri. Ezt a caniuse.com oldalon ellenőrizhetjük*/
+/*    pl a zoom nem működik firefoxban!!*/
+/*    https:// caniuse.com/#search=zoom*/
+/*    zoom: 0.5;*/
+    
     
 }
+
+/*#learnabout box-modell https://www.w3schools.com/css/css_boxmodel.asp*/
+
+
