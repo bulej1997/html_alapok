@@ -6,7 +6,10 @@
     background-color: aqua;
 }
 
-.menupont {
+
+/*ez a fo-menu classon belüli menüpont classokat választja ki*/
+
+.fo-menu .menupont {
     height: 40px;
 /*    körbe mindenhol 10px a margin*/
 /*    margin: 10px;*/
@@ -18,6 +21,10 @@
     
     background-color: blue;
     color: white;
+/*    ez a property megváltoztatja a html elem alapéretlmezett működését, jelen esetben*/
+/*    egy block szintű elem (div)-ből inline elemet csinál, de a block tulajdonságait is megőrzi.*/
+/*    azaz, reagálni fog az elem a width, és height paraméterekre*/
+/*    read more: https://www.w3schools.com/css/css_inline-block.asp*/
     display: inline-block;
     
     
@@ -29,10 +36,34 @@
     padding: 22px 10px 0 10px; /*fölül, jobbra, alul, balra*/
     
 }
+.al-menu {
+    margin-top: 20px;
+/*    jobbra rendezzük az almenüt*/
+    float: right;
+       
+}
+
+.al-menu .menupont{
+    margin-left: 10px;
+    display: inline-block;
+    text-decoration: underline;
+      
+}
+/*ha a menüpont fölé visszuk az egeret, akkor bekékül az adott pont*/
+/*touch-screen-en nincs hover!!*/
+
+.al-menu .menupont:hover {
+    color: blue;
+}
+
+
+
 
 .tartalom {
     background-color: lightgrey;
-    height: 1000px; /*ez csak azért kell hogy a scrollbar megjelenjen*/
+    height: 1000px;
+    margin-top: 40px;
+    /*ez csak azért kell hogy a scrollbar megjelenjen*/
 /*    bizonyos css property-ket nem ajánlott használni, mert nem mindig böngésző ismeri. Ezt a caniuse.com oldalon ellenőrizhetjük*/
 /*    pl a zoom nem működik firefoxban!!*/
 /*    https:// caniuse.com/#search=zoom*/
