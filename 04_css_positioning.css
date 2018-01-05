@@ -8,8 +8,8 @@ body{
     
     width: 100%;
     height: 50px;
-    background-color: blue;
-    color: white;
+    background-color: lightblue;
+    color: black;
 /*    a position fixed, kiszedi az elemet a document flowból, és egy fix helyre beteszi*/
 /*    a többi elem számára ez az elem nem lesz látható*/
     position: fixed;
@@ -30,6 +30,7 @@ body{
 /*    a position absolute kiveszi az elemet a document flow-ból*/
     position: absolute;
     
+    
 }
 
 .narancs-doboz{
@@ -48,16 +49,23 @@ body{
 /*    a relative position esetén a többi elem számára ez az elem ugyanúgy látható marad, és nem esik ki*/
 /*    a document flow-ból, viszont el lehet mozdítani a poícióját, a böngészőhöz képest relatívan*/
     position: relative;
-    left: 250px;
-    top: 50px;
+    left: 550px;
+/*    top: 50px;*/
 }
 
 .piros-doboz{
      width: 150px;
     height: 50px;
     background-color: red;
+/*    Ha egy szülő elem position absolute, vagy relative-ba van,*/
+/*    akkor a benne lévő elem ha absolute,vagy relative position-t kap,*/
+/*    akkor a szülőhöz képest fog elmozdulni, egyébként pedig a böngésző ablakhoz képest mozdulna el*/
     position: absolute;
     left: 200px;
+/*    Mi történjen akkor ha az elem tartalma túllóg az elemen:*/
+/*    jelenjen meg scrollbar? túllógjon? el legyen takarva?*/
+/*    a visible az alapértelmezett*/
+    overflow: visible;
     
 }
 
